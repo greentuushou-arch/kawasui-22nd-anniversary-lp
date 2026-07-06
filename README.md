@@ -34,12 +34,12 @@ scripts/
 | `images/hero/hero-unagi-main.svg` | ファーストビューのメインうなぎ画像 | 1200×900px以上 |
 | `images/history/history-shop-2004.jpg` | 出店当時の店舗ページ画像(差し替え済み) | 600×450px |
 | `images/history/history-product-2004.jpg` | 当時の商品ページ画像(差し替え済み) | 600×450px |
-| `images/history/history-work-2004.svg` | 当時の作業風景(仮画像・未差し替え) | 600×450px |
+| `images/history/history-work-2004.jpg` | 当時の作業風景(差し替え済み) | 600×450px |
 | `images/history/history-staff-2004.jpg` | 当時のスタッフ写真(差し替え済み) | 600×450px |
 | `images/products/product-01.svg` | 対象商品(うなぎ三種セット)の商品画像 | 600×600px |
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
-| `images/ceo/ceo-photo.svg` | 代表者(社長)写真 | 500×500px(正方形) |
+| `images/ceo/ceo-photo.jpg` | 代表者(社長)写真(差し替え済み) | 500×500px(正方形) |
 | `images/coupon/coupon-visual.svg` | クーポンイメージ画像(任意) | 800×500px |
 
 対象商品を増やす場合は、`index.html` 内の `.kw-product-card` ブロックをまるごとコピーして追加してください(手順コメントあり)。

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
-  <rect width="500" height="500" fill="#f4ece1"/>
-  <rect x="12" y="12" width="476" height="476" fill="none" stroke="#c8102e" stroke-width="6" stroke-dasharray="18 12"/>
-  <circle cx="250" cy="180" r="46" fill="#c8102e"/>
-  <text x="50%" y="190" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#fff">画</text>
-  <text x="50%" y="260" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#8e0d1f">代表者 写真</text>
-  <text x="50%" y="296" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">社長のお顔写真(正方形推奨)</text>
-  <text x="50%" y="328" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">推奨サイズ目安: 500x500px</text>
-</svg>
