@@ -12,7 +12,7 @@ index.html          … 特集ページ本体(HTML+CSS、CSSはpage内<style>に
 images/
   hero/              … ファーストビューのメインうなぎ画像
   history/           … 「あの日のかわすい」当時の写真4点
-  products/          … 対象商品カード用の商品画像(product-01〜04)
+  products/          … 対象商品(うなぎ三種セット)カード用の商品画像
   then-now/          … 「22年前と今」比較写真(before/after)
   ceo/               … 社長のひとこと用の代表者写真
   coupon/            … クーポンイメージ画像(任意・未使用時は削除可)
@@ -36,7 +36,7 @@ scripts/
 | `images/history/history-product-2004.svg` | 当時の商品ページ画像 | 600×450px |
 | `images/history/history-work-2004.svg` | 当時の作業風景 | 600×450px |
 | `images/history/history-staff-2004.svg` | 当時のスタッフ写真 | 600×450px |
-| `images/products/product-01〜04.svg` | 対象商品の商品画像(4点、増減可) | 600×600px |
+| `images/products/product-01.svg` | 対象商品(うなぎ三種セット)の商品画像 | 600×600px |
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
 | `images/ceo/ceo-photo.svg` | 代表者(社長)写真 | 500×500px(正方形) |

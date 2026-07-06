@@ -152,29 +152,6 @@ a.kw-cta:active{ opacity:.8; }
 .kw-hero-copy p{ margin:0; font-size:14px; font-weight:bold; }
 .kw-hero-copy p + p{ margin-top:4px; }
 
-.kw-chip-row{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:8px;
-  margin-bottom:24px;
-}
-.kw-chip{
-  background:#fff;
-  color:var(--red-main);
-  font-size:13px;
-  font-weight:bold;
-  padding:8px 14px;
-  border-radius:20px;
-  border:2px solid var(--gold);
-  box-shadow:0 2px 0 rgba(0,0,0,.15);
-}
-.kw-chip.kw-chip-gold{
-  background:var(--gold);
-  color:var(--red-deep);
-  border-color:#fff;
-}
-
 .kw-cta-primary{
   background:linear-gradient(180deg,#ffe27a,var(--gold));
   color:var(--red-deep);
@@ -319,9 +296,8 @@ a.kw-cta:active{ opacity:.8; }
 
 /* ---------- 6. 対象商品エリア ---------- */
 .kw-product-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+  display:flex;
+  justify-content:center;
   margin-top:24px;
 }
 .kw-product-card{
@@ -332,6 +308,8 @@ a.kw-cta:active{ opacity:.8; }
   box-shadow:0 3px 8px rgba(0,0,0,.06);
   display:flex;
   flex-direction:column;
+  width:100%;
+  max-width:360px;
 }
 .kw-product-card img{ border-bottom:3px solid var(--gold); }
 .kw-product-body{ padding:12px; flex:1; display:flex; flex-direction:column; }
@@ -525,7 +503,6 @@ a.kw-cta:active{ opacity:.8; }
   .kw-hero-img-frame img{ border-radius:8px; }
 
   .kw-history-grid{ grid-template-columns:repeat(4,1fr); }
-  .kw-product-grid{ grid-template-columns:repeat(4,1fr); }
 
   .kw-coupon-price{ font-size:72px; }
   .kw-coupon-price span{ font-size:36px; }
@@ -548,7 +525,7 @@ a.kw-cta:active{ opacity:.8; }
       <span class="kw-badge-anniv">楽天出店22周年記念</span>
 
       <h1 class="kw-hero-title">
-        2時間だけ<span class="kw-accent">タイムスリップ。</span><br>
+        1日限り<span class="kw-accent">タイムスリップ。</span><br>
         22年前、楽天に初めて<br>出店したあの日へ。
       </h1>
       <p class="kw-hero-sub">
@@ -564,13 +541,6 @@ a.kw-cta:active{ opacity:.8; }
       <div class="kw-hero-copy">
         <p>うなぎ屋かわすい 楽天出店22周年記念</p>
         <p>7月12日限定 感謝の2,200円OFFクーポン</p>
-      </div>
-
-      <div class="kw-chip-row">
-        <span class="kw-chip kw-chip-gold">楽天出店22周年</span>
-        <span class="kw-chip">7月12日限定</span>
-        <span class="kw-chip kw-chip-gold">2,200円OFFクーポン</span>
-        <span class="kw-chip">1日限り</span>
       </div>
 
       <!-- ▼CTAリンク先: # を実際のクーポン取得ページ/対象商品ページのURLに差し替えてください -->
@@ -712,53 +682,20 @@ a.kw-cta:active{ opacity:.8; }
       <h2 class="kw-section-title">22周年の感謝を込めた<br>対象商品はこちら</h2>
 
       <!--
-        ▼対象商品カードの複製方法:
-        1つの .kw-product-card ブロックをまるごとコピーし、
+        ▼対象商品を増やす場合:
+        .kw-product-card ブロックをまるごとコピーし、
         画像・商品名・価格・説明文・リンク先を差し替えて追加してください。
       -->
       <div class="kw-product-grid">
 
         <div class="kw-product-card">
-          <img src="images/products/product-01.svg" alt="対象商品1">
+          <img src="images/products/product-01.svg" alt="うなぎ三種セット">
           <div class="kw-product-body">
-            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 1尾セット</p>
-            <p class="kw-product-desc">国産うなぎを職人が丁寧に焼き上げました。</p>
+            <p class="kw-product-name">うなぎ三種セット</p>
+            <p class="kw-product-desc">職人が丁寧に焼き上げた、うなぎ蒲焼三種を食べ比べいただけるセットです。</p>
             <p class="kw-price-normal">通常価格 ¥0,000</p>
             <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
             <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-cta-small">商品を見る</a>
-          </div>
-        </div>
-
-        <div class="kw-product-card">
-          <img src="images/products/product-02.svg" alt="対象商品2">
-          <div class="kw-product-body">
-            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 2尾セット</p>
-            <p class="kw-product-desc">ご家族・ご夫婦にちょうど良いボリューム。</p>
-            <p class="kw-price-normal">通常価格 ¥0,000</p>
-            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
-            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
-          </div>
-        </div>
-
-        <div class="kw-product-card">
-          <img src="images/products/product-03.svg" alt="対象商品3">
-          <div class="kw-product-body">
-            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 3尾セット</p>
-            <p class="kw-product-desc">土用の丑の日にもおすすめのご馳走セット。</p>
-            <p class="kw-price-normal">通常価格 ¥0,000</p>
-            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
-            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
-          </div>
-        </div>
-
-        <div class="kw-product-card">
-          <img src="images/products/product-04.svg" alt="対象商品4">
-          <div class="kw-product-body">
-            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 化粧箱ギフト</p>
-            <p class="kw-product-desc">大切な方への贈り物にも選ばれています。</p>
-            <p class="kw-price-normal">通常価格 ¥0,000</p>
-            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
-            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
           </div>
         </div>
 
