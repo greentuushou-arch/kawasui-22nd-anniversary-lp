@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#f4ece1"/>
+  <rect x="12" y="12" width="1176" height="876" fill="none" stroke="#c8102e" stroke-width="6" stroke-dasharray="18 12"/>
+  <circle cx="600" cy="380" r="46" fill="#c8102e"/>
+  <text x="50%" y="390" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#fff">画</text>
+  <text x="50%" y="460" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#8e0d1f">うなぎメイン画像</text>
+  <text x="50%" y="496" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">香ばしく焼けた蒲焼を大きく・食欲がわく構図で</text>
+  <text x="50%" y="528" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">推奨サイズ目安: 1200x900px以上</text>
+</svg>

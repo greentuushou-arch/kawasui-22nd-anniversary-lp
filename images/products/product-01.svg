@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#f4ece1"/>
+  <rect x="12" y="12" width="576" height="576" fill="none" stroke="#c8102e" stroke-width="6" stroke-dasharray="18 12"/>
+  <circle cx="300" cy="230" r="46" fill="#c8102e"/>
+  <text x="50%" y="240" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#fff">画</text>
+  <text x="50%" y="310" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#8e0d1f">対象商品1 画像</text>
+  <text x="50%" y="346" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">商品名・パッケージが分かる写真</text>
+  <text x="50%" y="378" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">推奨サイズ目安: 600x600px</text>
+</svg>

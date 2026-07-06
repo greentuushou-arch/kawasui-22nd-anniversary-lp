@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#f4ece1"/>
+  <rect x="12" y="12" width="576" height="426" fill="none" stroke="#c8102e" stroke-width="6" stroke-dasharray="18 12"/>
+  <circle cx="300" cy="155" r="46" fill="#c8102e"/>
+  <text x="50%" y="165" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#fff">画</text>
+  <text x="50%" y="235" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#8e0d1f">出店当時の店舗ページ画像</text>
+  <text x="50%" y="271" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">2004年頃の店舗トップページのスクリーンショット等</text>
+  <text x="50%" y="303" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">推奨サイズ目安: 600x450px</text>
+</svg>

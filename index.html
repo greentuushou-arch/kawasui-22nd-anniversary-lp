@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>うなぎ屋かわすい 楽天出店22周年記念キャンペーン | 7月12日限定 2,200円OFFクーポン</title>
+
+<style>
+/* ==========================================================================
+   うなぎ屋かわすい 楽天出店22周年記念キャンペーン 特集ページ
+   - CSSはすべてこの<style>内にまとめています(楽天GOLD/商品ページ埋め込み想定)
+   - JavaScriptは使用していません(HTML/CSSのみ)
+   - スマホ表示を基準に作成し、768px以上をPCレイアウトとしています
+   ========================================================================== */
+
+:root{
+  --red-main:#c8102e;
+  --red-dark:#8e0d1f;
+  --red-deep:#5c0a16;
+  --gold:#d4af37;
+  --gold-light:#f4e3a1;
+  --black:#1a1210;
+  --cream:#fdf6ec;
+  --line:#e8d9b8;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  padding:0;
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+  color:var(--black);
+  background:var(--cream);
+  line-height:1.8;
+  -webkit-text-size-adjust:100%;
+}
+
+img{ max-width:100%; display:block; }
+
+.kw-wrap{ max-width:750px; margin:0 auto; background:#fff; overflow:hidden; }
+
+.kw-inner{ padding:0 20px; }
+
+a.kw-cta{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  font-weight:bold;
+  border-radius:50px;
+  transition:opacity .2s;
+}
+a.kw-cta:active{ opacity:.8; }
+
+/* ---------- 共通見出し ---------- */
+.kw-section-title{
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+  color:var(--red-main);
+  margin:0 0 8px;
+  letter-spacing:.02em;
+}
+.kw-section-title small{
+  display:block;
+  font-size:13px;
+  color:#999;
+  font-weight:normal;
+  margin-top:6px;
+}
+.kw-section-title::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:4px;
+  background:var(--gold);
+  margin:14px auto 0;
+  border-radius:2px;
+}
+
+/* ---------- 1. ファーストビュー ---------- */
+.kw-hero{
+  position:relative;
+  background:
+    radial-gradient(circle at 50% 0%, var(--red-main) 0%, var(--red-dark) 55%, var(--red-deep) 100%);
+  color:#fff;
+  padding:28px 16px 34px;
+  text-align:center;
+  overflow:hidden;
+}
+.kw-hero::before{
+  /* 祭り感を出す放射状の光背景(装飾/画像不使用) */
+  content:"";
+  position:absolute;
+  top:-50%; left:-50%;
+  width:200%; height:200%;
+  background:repeating-conic-gradient(from 0deg, rgba(255,255,255,.06) 0deg 8deg, transparent 8deg 16deg);
+  animation:none;
+  pointer-events:none;
+}
+.kw-hero-content{ position:relative; z-index:1; }
+
+.kw-badge-anniv{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--red-deep);
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 18px;
+  border-radius:30px;
+  letter-spacing:.05em;
+  margin-bottom:14px;
+  box-shadow:0 3px 0 rgba(0,0,0,.15);
+}
+
+.kw-hero-title{
+  font-size:30px;
+  font-weight:900;
+  margin:0 0 6px;
+  line-height:1.4;
+  text-shadow:0 2px 6px rgba(0,0,0,.35);
+}
+.kw-hero-title .kw-accent{
+  display:inline-block;
+  color:var(--gold-light);
+}
+.kw-hero-sub{
+  font-size:16px;
+  font-weight:bold;
+  margin:0 0 20px;
+  opacity:.95;
+}
+
+.kw-hero-img-frame{
+  margin:0 -16px 20px;
+  position:relative;
+}
+.kw-hero-img-frame img{
+  width:100%;
+  height:auto;
+  border-top:4px solid var(--gold);
+  border-bottom:4px solid var(--gold);
+}
+
+.kw-hero-copy{
+  background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:10px;
+  padding:16px;
+  margin-bottom:20px;
+}
+.kw-hero-copy p{ margin:0; font-size:14px; font-weight:bold; }
+.kw-hero-copy p + p{ margin-top:4px; }
+
+.kw-chip-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin-bottom:24px;
+}
+.kw-chip{
+  background:#fff;
+  color:var(--red-main);
+  font-size:13px;
+  font-weight:bold;
+  padding:8px 14px;
+  border-radius:20px;
+  border:2px solid var(--gold);
+  box-shadow:0 2px 0 rgba(0,0,0,.15);
+}
+.kw-chip.kw-chip-gold{
+  background:var(--gold);
+  color:var(--red-deep);
+  border-color:#fff;
+}
+
+.kw-cta-primary{
+  background:linear-gradient(180deg,#ffe27a,var(--gold));
+  color:var(--red-deep);
+  font-size:18px;
+  padding:18px 20px;
+  box-shadow:0 5px 0 #a8811a, 0 8px 16px rgba(0,0,0,.35);
+  border:2px solid #fff;
+}
+.kw-cta-primary .kw-cta-sub{
+  display:block;
+  font-size:11px;
+  font-weight:normal;
+  margin-top:2px;
+}
+
+.kw-hero-note{
+  font-size:11px;
+  color:rgba(255,255,255,.75);
+  margin-top:14px;
+}
+
+/* ---------- 2. あの日のかわすい ---------- */
+.kw-section{ padding:44px 0; }
+.kw-section-cream{ background:var(--cream); }
+.kw-section-white{ background:#fff; }
+
+.kw-body-text{
+  font-size:15px;
+  color:#333;
+  margin:20px 0;
+}
+.kw-body-text p{ margin:0 0 1em; }
+
+.kw-history-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:24px 0 8px;
+}
+.kw-history-grid figure{ margin:0; }
+.kw-history-grid img{
+  border:3px solid var(--gold);
+  border-radius:4px;
+}
+.kw-history-grid figcaption{
+  font-size:11px;
+  color:#888;
+  text-align:center;
+  margin-top:6px;
+}
+
+/* ---------- 3. 本当は22年前の価格で... ---------- */
+.kw-honesty-box{
+  background:#fff;
+  border:2px dashed var(--red-main);
+  border-radius:10px;
+  padding:20px;
+  margin:24px 0;
+}
+.kw-honesty-box p{ margin:0 0 1em; font-size:15px; }
+.kw-honesty-box p:last-child{ margin-bottom:0; font-weight:bold; color:var(--red-main); }
+
+/* ---------- 4. 22にちなんだクーポン強調 ---------- */
+.kw-coupon-block{
+  background:linear-gradient(160deg,var(--red-main),var(--red-deep));
+  color:#fff;
+  text-align:center;
+  padding:44px 20px;
+  position:relative;
+}
+.kw-coupon-date{
+  display:inline-block;
+  background:#fff;
+  color:var(--red-main);
+  font-weight:bold;
+  font-size:14px;
+  padding:6px 16px;
+  border-radius:20px;
+  margin-bottom:16px;
+}
+.kw-coupon-num{
+  font-size:15px;
+  font-weight:bold;
+  margin:0 0 4px;
+  color:var(--gold-light);
+}
+.kw-coupon-price{
+  font-size:56px;
+  font-weight:900;
+  color:#fff;
+  line-height:1.1;
+  margin:0 0 4px;
+  text-shadow:0 3px 0 var(--red-deep), 0 6px 14px rgba(0,0,0,.4);
+}
+.kw-coupon-price span{ font-size:28px; }
+.kw-coupon-label{
+  font-size:16px;
+  font-weight:bold;
+  color:var(--gold-light);
+  margin-bottom:24px;
+}
+.kw-coupon-block .kw-body-text{ color:#fff; text-align:left; }
+.kw-coupon-block .kw-body-text p{ font-size:14px; }
+
+.kw-cta-gold{
+  background:linear-gradient(180deg,#ffe27a,var(--gold));
+  color:var(--red-deep);
+  font-size:17px;
+  padding:16px 18px;
+  margin-top:22px;
+  box-shadow:0 5px 0 #a8811a, 0 8px 16px rgba(0,0,0,.35);
+  border:2px solid #fff;
+}
+
+/* ---------- 5. キャンペーン概要 ---------- */
+.kw-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:24px 0;
+  font-size:14px;
+}
+.kw-table th, .kw-table td{
+  border:1px solid var(--line);
+  padding:12px 10px;
+  text-align:left;
+  vertical-align:top;
+}
+.kw-table th{
+  background:var(--red-main);
+  color:#fff;
+  width:30%;
+  font-weight:bold;
+  white-space:nowrap;
+}
+.kw-table td{ background:#fff; }
+.kw-table .kw-edit-note{
+  display:block;
+  font-size:11px;
+  color:#b33;
+  margin-top:4px;
+}
+
+/* ---------- 6. 対象商品エリア ---------- */
+.kw-product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:24px;
+}
+.kw-product-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 3px 8px rgba(0,0,0,.06);
+  display:flex;
+  flex-direction:column;
+}
+.kw-product-card img{ border-bottom:3px solid var(--gold); }
+.kw-product-body{ padding:12px; flex:1; display:flex; flex-direction:column; }
+.kw-product-name{
+  font-size:14px;
+  font-weight:bold;
+  margin:0 0 8px;
+  min-height:2.4em;
+}
+.kw-product-desc{
+  font-size:12px;
+  color:#666;
+  margin:0 0 10px;
+  flex:1;
+}
+.kw-price-normal{
+  font-size:12px;
+  color:#999;
+  text-decoration:line-through;
+  margin:0;
+}
+.kw-price-coupon{
+  font-size:16px;
+  color:var(--red-main);
+  font-weight:bold;
+  margin:0 0 10px;
+}
+.kw-price-coupon .kw-price-off{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--red-deep);
+  font-size:10px;
+  font-weight:bold;
+  padding:2px 6px;
+  border-radius:10px;
+  margin-left:4px;
+  vertical-align:middle;
+}
+.kw-cta-small{
+  display:block;
+  background:var(--red-main);
+  color:#fff;
+  font-size:13px;
+  padding:10px;
+  border-radius:30px;
+  margin-top:auto;
+}
+
+/* ---------- 7. 22年前と今 ---------- */
+.kw-compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:24px 0;
+  align-items:end;
+}
+.kw-compare figure{ margin:0; position:relative; }
+.kw-compare img{ border:3px solid var(--gold); border-radius:4px; }
+.kw-compare figcaption{
+  position:absolute;
+  top:8px; left:8px;
+  background:var(--red-main);
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+  padding:4px 10px;
+  border-radius:20px;
+}
+
+/* ---------- 8. 社長のひとこと ---------- */
+.kw-ceo-block{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  margin-top:24px;
+}
+.kw-ceo-photo{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid var(--gold);
+  flex-shrink:0;
+}
+.kw-ceo-photo img{ width:100%; height:100%; object-fit:cover; }
+.kw-ceo-bubble{
+  position:relative;
+  background:#fff;
+  border:2px solid var(--red-main);
+  border-radius:14px;
+  padding:16px;
+  font-size:13px;
+  color:#333;
+}
+.kw-ceo-bubble::before{
+  content:"";
+  position:absolute;
+  left:-10px; top:20px;
+  border-width:8px 10px 8px 0;
+  border-style:solid;
+  border-color:transparent var(--red-main) transparent transparent;
+}
+.kw-ceo-bubble::after{
+  content:"";
+  position:absolute;
+  left:-7px; top:20px;
+  border-width:8px 9px 8px 0;
+  border-style:solid;
+  border-color:transparent #fff transparent transparent;
+}
+.kw-ceo-bubble p{ margin:0 0 1em; }
+.kw-ceo-bubble p:last-child{ margin-bottom:0; }
+.kw-ceo-sign{
+  text-align:right;
+  font-size:13px;
+  font-weight:bold;
+  margin-top:14px;
+  color:var(--red-main);
+}
+
+/* ---------- 9. 最後のCTA ---------- */
+.kw-final-cta{
+  background:
+    linear-gradient(180deg, var(--red-deep), var(--black));
+  color:#fff;
+  text-align:center;
+  padding:40px 20px 50px;
+}
+.kw-final-cta .kw-final-title{
+  font-size:22px;
+  font-weight:900;
+  line-height:1.6;
+  margin:0 0 26px;
+  color:#fff;
+}
+.kw-final-cta .kw-final-title .kw-accent{ color:var(--gold-light); }
+.kw-final-btns{ display:flex; flex-direction:column; gap:12px; }
+.kw-final-btns .kw-cta-gold{ margin-top:0; }
+.kw-cta-outline{
+  background:transparent;
+  color:#fff;
+  border:2px solid var(--gold);
+  padding:14px 18px;
+  font-size:15px;
+}
+
+/* ---------- 注意事項 / フッター ---------- */
+.kw-footer-note{
+  background:#f2ecdf;
+  padding:24px 20px 40px;
+  font-size:11px;
+  color:#888;
+}
+.kw-footer-note p{ margin:0 0 .8em; }
+
+/* ---------- スマホ追従CTAバー(JS不使用/position:stickyのみ) ---------- */
+.kw-sticky-cta{
+  position:sticky;
+  bottom:0;
+  z-index:50;
+  display:flex;
+  gap:8px;
+  padding:10px;
+  background:rgba(255,255,255,.96);
+  border-top:2px solid var(--gold);
+  box-shadow:0 -3px 10px rgba(0,0,0,.15);
+}
+.kw-sticky-cta a{
+  flex:1;
+  font-size:13px;
+  padding:12px 6px;
+}
+.kw-sticky-cta .kw-sticky-primary{
+  background:linear-gradient(180deg,#ffe27a,var(--gold));
+  color:var(--red-deep);
+  border:2px solid var(--red-main);
+}
+.kw-sticky-cta .kw-sticky-secondary{
+  background:var(--red-main);
+  color:#fff;
+  border:2px solid var(--gold);
+}
+
+/* ==========================================================================
+   PCレイアウト (768px以上)
+   ========================================================================== */
+@media screen and (min-width:768px){
+  .kw-hero-title{ font-size:40px; }
+  .kw-hero-sub{ font-size:19px; }
+  .kw-hero-img-frame{ margin-left:0; margin-right:0; border-radius:8px; overflow:hidden; }
+  .kw-hero-img-frame img{ border-radius:8px; }
+
+  .kw-history-grid{ grid-template-columns:repeat(4,1fr); }
+  .kw-product-grid{ grid-template-columns:repeat(4,1fr); }
+
+  .kw-coupon-price{ font-size:72px; }
+  .kw-coupon-price span{ font-size:36px; }
+
+  .kw-final-btns{ flex-direction:row; justify-content:center; }
+  .kw-final-btns a{ min-width:260px; }
+
+  .kw-sticky-cta{ display:none; } /* PCでは追従バーは非表示、通常CTAのみで十分な導線とする */
+}
+</style>
+</head>
+<body>
+<div class="kw-wrap">
+
+  <!-- ============================================================
+       1. ファーストビュー
+       ============================================================ -->
+  <section class="kw-hero">
+    <div class="kw-hero-content kw-inner">
+      <span class="kw-badge-anniv">楽天出店22周年記念</span>
+
+      <h1 class="kw-hero-title">
+        2時間だけ<span class="kw-accent">タイムスリップ。</span><br>
+        22年前、楽天に初めて<br>出店したあの日へ。
+      </h1>
+      <p class="kw-hero-sub">
+        うなぎ屋かわすい 楽天出店22周年<br>
+        7月12日限定 2,200円OFFクーポンキャンペーン
+      </p>
+
+      <!-- ▼メイン画像差し替え箇所: images/hero/hero-unagi-main.svg を実写真(jpg/png)に差し替えてください -->
+      <div class="kw-hero-img-frame">
+        <img src="images/hero/hero-unagi-main.svg" alt="うなぎ屋かわすいの蒲焼うなぎ">
+      </div>
+
+      <div class="kw-hero-copy">
+        <p>うなぎ屋かわすい 楽天出店22周年記念</p>
+        <p>7月12日限定 感謝の2,200円OFFクーポン</p>
+      </div>
+
+      <div class="kw-chip-row">
+        <span class="kw-chip kw-chip-gold">楽天出店22周年</span>
+        <span class="kw-chip">7月12日限定</span>
+        <span class="kw-chip kw-chip-gold">2,200円OFFクーポン</span>
+        <span class="kw-chip">1日限り</span>
+      </div>
+
+      <!-- ▼CTAリンク先: # を実際のクーポン取得ページ/対象商品ページのURLに差し替えてください -->
+      <a href="#" class="kw-cta kw-cta-primary">
+        今すぐクーポンを獲得する
+        <span class="kw-cta-sub">※クーポンは7月12日限定・数量には限りがあります</span>
+      </a>
+
+      <p class="kw-hero-note">
+        ※クーポンの利用条件・対象商品・発行数には制限があります。詳細はページ下部をご確認ください。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. 2004年7月12日、あの日から始まりました
+       ============================================================ -->
+  <section class="kw-section kw-section-cream">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">あの日のかわすい<small>2004年7月12日、あの日から始まりました</small></h2>
+
+      <div class="kw-body-text">
+        <p>2004年7月12日。<br>うなぎ屋かわすいが楽天市場に初めて出店した日。</p>
+        <p>注文が入るたびに喜び、<br>お客様からいただくレビューに励まされ、<br>気が付けば22年。</p>
+        <p>たくさんのお客様に支えていただき、<br>今年、楽天出店22周年を迎えることができました。</p>
+        <p>本当にありがとうございます。</p>
+      </div>
+
+      <!-- ▼当時の写真差し替え箇所(4点): images/history/ 配下のsvgを実写真に差し替えてください -->
+      <div class="kw-history-grid">
+        <figure>
+          <img src="images/history/history-shop-2004.svg" alt="出店当時の店舗ページ画像">
+          <figcaption>出店当時の店舗ページ</figcaption>
+        </figure>
+        <figure>
+          <img src="images/history/history-product-2004.svg" alt="当時の商品ページ画像">
+          <figcaption>当時の商品ページ</figcaption>
+        </figure>
+        <figure>
+          <img src="images/history/history-work-2004.svg" alt="当時の作業風景">
+          <figcaption>当時の作業風景</figcaption>
+        </figure>
+        <figure>
+          <img src="images/history/history-staff-2004.svg" alt="当時のスタッフ写真">
+          <figcaption>当時のスタッフ</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. 本当は、22年前の価格で販売したかった。
+       ============================================================ -->
+  <section class="kw-section kw-section-white">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">本当は、22年前の価格で<br>販売したかった。</h2>
+
+      <div class="kw-honesty-box">
+        <p>22周年を迎えるにあたり、最初に考えたのは、</p>
+        <p>「22年前の価格を復活させよう」</p>
+        <p>という企画でした。</p>
+        <p>しかし当時と今では、うなぎの大きさ、セット内容、内容量、送料などが変わっています。</p>
+        <p>そのため、22年前の価格を正確に再現することはできませんでした。</p>
+        <p>でも、当時の感謝の気持ちは、今も変わりません。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. だから、22周年の"22"にちなみました。
+       ============================================================ -->
+  <section class="kw-coupon-block">
+    <div class="kw-inner">
+      <span class="kw-coupon-date">7月12日限定</span>
+
+      <p class="kw-coupon-num">22周年の"22"にちなんだ</p>
+      <p class="kw-coupon-price">2,200<span>円OFF</span></p>
+      <p class="kw-coupon-label">クーポンキャンペーン</p>
+
+      <div class="kw-body-text">
+        <p>当時の価格をそのまま再現することはできない。<br>でも、22年間の感謝の気持ちを、少しでも形にしたい。</p>
+        <p>そこで今回、22周年の「22」にちなみ、<br>1日限りで使える2,200円OFFクーポンをご用意しました。</p>
+        <p>22年間、本当にありがとうございます。<br>感謝を込めた、7月12日だけの特別企画です。</p>
+      </div>
+
+      <!-- ▼CTAリンク先: # を実際のクーポン取得ページのURLに差し替えてください -->
+      <a href="#" class="kw-cta kw-cta-gold">2,200円OFFクーポンを獲得する</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. キャンペーン概要
+       ============================================================ -->
+  <section class="kw-section kw-section-cream">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">キャンペーン概要</h2>
+
+      <!-- ▼表内の内容は仮情報を含みます。確定次第、下記を編集してください -->
+      <table class="kw-table">
+        <tr>
+          <th>企画名</th>
+          <td>うなぎ屋かわすい 楽天出店22周年記念キャンペーン</td>
+        </tr>
+        <tr>
+          <th>開催日</th>
+          <td>2026年7月12日限定</td>
+        </tr>
+        <tr>
+          <th>内容</th>
+          <td>対象商品に使える2,200円OFFクーポン配布</td>
+        </tr>
+        <tr>
+          <th>対象商品</th>
+          <td>
+            指定のうなぎ商品
+            <span class="kw-edit-note">【要編集】対象商品名を具体的にご記入ください</span>
+          </td>
+        </tr>
+        <tr>
+          <th>利用条件</th>
+          <td>
+            準備中
+            <span class="kw-edit-note">【要編集】利用条件(最低利用金額・利用回数等)が決まり次第ご記入ください</span>
+          </td>
+        </tr>
+        <tr>
+          <th>注意事項</th>
+          <td>クーポンの利用条件・発行枚数の制限・対象商品につきましては、楽天市場のクーポンページをご確認ください。</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. 対象商品エリア
+       ============================================================ -->
+  <section class="kw-section kw-section-white">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">22周年の感謝を込めた<br>対象商品はこちら</h2>
+
+      <!--
+        ▼対象商品カードの複製方法:
+        1つの .kw-product-card ブロックをまるごとコピーし、
+        画像・商品名・価格・説明文・リンク先を差し替えて追加してください。
+      -->
+      <div class="kw-product-grid">
+
+        <div class="kw-product-card">
+          <img src="images/products/product-01.svg" alt="対象商品1">
+          <div class="kw-product-body">
+            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 1尾セット</p>
+            <p class="kw-product-desc">国産うなぎを職人が丁寧に焼き上げました。</p>
+            <p class="kw-price-normal">通常価格 ¥0,000</p>
+            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
+            <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-cta-small">商品を見る</a>
+          </div>
+        </div>
+
+        <div class="kw-product-card">
+          <img src="images/products/product-02.svg" alt="対象商品2">
+          <div class="kw-product-body">
+            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 2尾セット</p>
+            <p class="kw-product-desc">ご家族・ご夫婦にちょうど良いボリューム。</p>
+            <p class="kw-price-normal">通常価格 ¥0,000</p>
+            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
+            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
+          </div>
+        </div>
+
+        <div class="kw-product-card">
+          <img src="images/products/product-03.svg" alt="対象商品3">
+          <div class="kw-product-body">
+            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 3尾セット</p>
+            <p class="kw-product-desc">土用の丑の日にもおすすめのご馳走セット。</p>
+            <p class="kw-price-normal">通常価格 ¥0,000</p>
+            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
+            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
+          </div>
+        </div>
+
+        <div class="kw-product-card">
+          <img src="images/products/product-04.svg" alt="対象商品4">
+          <div class="kw-product-body">
+            <p class="kw-product-name">【商品名を入力】うなぎ蒲焼 化粧箱ギフト</p>
+            <p class="kw-product-desc">大切な方への贈り物にも選ばれています。</p>
+            <p class="kw-price-normal">通常価格 ¥0,000</p>
+            <p class="kw-price-coupon">クーポン利用後 ¥0,000<span class="kw-price-off">2,200円OFF</span></p>
+            <a href="#" class="kw-cta kw-cta-small">商品を見る</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. 22年前と今
+       ============================================================ -->
+  <section class="kw-section kw-section-cream">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">22年前と今</h2>
+
+      <!-- ▼比較写真差し替え箇所: images/then-now/ 配下のsvgを実写真に差し替えてください -->
+      <div class="kw-compare">
+        <figure>
+          <figcaption>22年前のかわすい</figcaption>
+          <img src="images/then-now/then-now-before.svg" alt="22年前のかわすい">
+        </figure>
+        <figure>
+          <figcaption>今のかわすい</figcaption>
+          <img src="images/then-now/then-now-after.svg" alt="今のかわすい">
+        </figure>
+      </div>
+
+      <div class="kw-body-text">
+        <p>22年の間に、お店も、商品も、時代も変わりました。<br>それでも変わらないものがあります。</p>
+        <p>それは、<br>お客様においしいうなぎを届けたい<br>という気持ちです。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. 社長のひとこと
+       ============================================================ -->
+  <section class="kw-section kw-section-white">
+    <div class="kw-inner">
+      <h2 class="kw-section-title">代表より、22年間の<br>感謝を込めて</h2>
+
+      <div class="kw-ceo-block">
+        <!-- ▼社長写真差し替え箇所: images/ceo/ceo-photo.svg を実写真に差し替えてください -->
+        <div class="kw-ceo-photo">
+          <img src="images/ceo/ceo-photo.svg" alt="代表者写真">
+        </div>
+        <div class="kw-ceo-bubble">
+          <p>22年間、本当にありがとうございます。</p>
+          <p>楽天市場へ出店した当時は、22年後の未来など想像もできませんでした。ここまで続けてこられたのは、いつもご利用くださるお客様のおかげです。</p>
+          <p>本当は22年前の価格をそのまま再現したかったのですが、当時とは内容量や送料などが変わっており、正確に再現することが難しい状況でした。</p>
+          <p>それでも、22周年の感謝を少しでも形にしたいと思い、今回2,200円OFFクーポンをご用意しました。</p>
+          <p>これからも、変わらぬ美味しさと真心をお届けできるよう努めてまいります。今後とも、うなぎ屋かわすいをよろしくお願いいたします。</p>
+          <p class="kw-ceo-sign">
+            うなぎ屋かわすい<br>
+            代表取締役　<span><!-- ▼代表者名を入力 -->〇〇〇〇</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. 最後のCTA
+       ============================================================ -->
+  <section class="kw-final-cta">
+    <div class="kw-inner">
+      <p class="kw-final-title">
+        7月12日限定。<br>
+        <span class="kw-accent">22年間の感謝</span>を込めた、<br>
+        1日限りの特別企画。
+      </p>
+      <div class="kw-final-btns">
+        <!-- ▼CTAリンク先: # を実際のURLに差し替えてください -->
+        <a href="#" class="kw-cta kw-cta-gold">クーポンを獲得する</a>
+        <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-cta-outline">対象商品を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       注意事項 / フッター
+       ============================================================ -->
+  <section class="kw-footer-note">
+    <p>※「22年前の価格を再現」するものではありません。当時とは内容量・送料等が異なるため正確な再現が難しく、22周年の"22"にちなんだ2,200円OFFクーポンをご用意しております。</p>
+    <p>※クーポンの利用条件・発行枚数・対象商品につきましては、楽天市場のクーポンページをご確認ください。</p>
+    <p>※本ページの価格・対象商品・利用条件は変更となる場合がございます。</p>
+    <p>うなぎ屋かわすい楽天市場店:
+      <a href="https://www.rakuten.co.jp/kawasui/" style="color:#8e0d1f;">https://www.rakuten.co.jp/kawasui/</a>
+    </p>
+  </section>
+
+  <!-- スマホ追従CTA(JS不使用/position:stickyのみ、PCでは非表示) -->
+  <div class="kw-sticky-cta">
+    <a href="#" class="kw-cta kw-sticky-primary">クーポンを獲得する</a>
+    <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-sticky-secondary">対象商品を見る</a>
+  </div>
+
+</div>
+</body>
+</html>
