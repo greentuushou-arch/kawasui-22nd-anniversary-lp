@@ -32,10 +32,10 @@ scripts/
 | 画像 | 用途 | 推奨サイズ目安 |
 |---|---|---|
 | `images/hero/hero-unagi-main.svg` | ファーストビューのメインうなぎ画像 | 1200×900px以上 |
-| `images/history/history-shop-2004.svg` | 出店当時の店舗ページ画像 | 600×450px |
-| `images/history/history-product-2004.svg` | 当時の商品ページ画像 | 600×450px |
-| `images/history/history-work-2004.svg` | 当時の作業風景 | 600×450px |
-| `images/history/history-staff-2004.svg` | 当時のスタッフ写真 | 600×450px |
+| `images/history/history-shop-2004.jpg` | 出店当時の店舗ページ画像(差し替え済み) | 600×450px |
+| `images/history/history-product-2004.jpg` | 当時の商品ページ画像(差し替え済み) | 600×450px |
+| `images/history/history-work-2004.svg` | 当時の作業風景(仮画像・未差し替え) | 600×450px |
+| `images/history/history-staff-2004.jpg` | 当時のスタッフ写真(差し替え済み) | 600×450px |
 | `images/products/product-01.svg` | 対象商品(うなぎ三種セット)の商品画像 | 600×600px |
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
