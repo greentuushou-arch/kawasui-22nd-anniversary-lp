@@ -42,6 +42,19 @@ img{ max-width:100%; display:block; }
 
 .kw-inner{ padding:0 20px; }
 
+/* ---------- ヘッダー(ロゴ) ---------- */
+.kw-header{
+  background:#fff;
+  padding:14px 20px;
+  text-align:center;
+  border-bottom:3px solid var(--gold);
+}
+.kw-header-logo{
+  height:32px;
+  width:auto;
+  margin:0 auto;
+}
+
 a.kw-cta{
   display:block;
   text-decoration:none;
@@ -99,37 +112,6 @@ a.kw-cta:active{ opacity:.8; }
   pointer-events:none;
 }
 .kw-hero-content{ position:relative; z-index:1; }
-
-.kw-badge-anniv{
-  display:inline-block;
-  background:var(--gold);
-  color:var(--red-deep);
-  font-weight:bold;
-  font-size:13px;
-  padding:6px 18px;
-  border-radius:30px;
-  letter-spacing:.05em;
-  margin-bottom:14px;
-  box-shadow:0 3px 0 rgba(0,0,0,.15);
-}
-
-.kw-hero-title{
-  font-size:30px;
-  font-weight:900;
-  margin:0 0 6px;
-  line-height:1.4;
-  text-shadow:0 2px 6px rgba(0,0,0,.35);
-}
-.kw-hero-title .kw-accent{
-  display:inline-block;
-  color:var(--gold-light);
-}
-.kw-hero-sub{
-  font-size:16px;
-  font-weight:bold;
-  margin:0 0 20px;
-  opacity:.95;
-}
 
 .kw-hero-img-frame{
   margin:0 -16px 20px;
@@ -497,8 +479,7 @@ a.kw-cta:active{ opacity:.8; }
    PCレイアウト (768px以上)
    ========================================================================== */
 @media screen and (min-width:768px){
-  .kw-hero-title{ font-size:40px; }
-  .kw-hero-sub{ font-size:19px; }
+  .kw-header-logo{ height:44px; }
   .kw-hero-img-frame{ margin-left:0; margin-right:0; border-radius:8px; overflow:hidden; }
   .kw-hero-img-frame img{ border-radius:8px; }
 
@@ -518,24 +499,23 @@ a.kw-cta:active{ opacity:.8; }
 <div class="kw-wrap">
 
   <!-- ============================================================
+       ヘッダー(ロゴ)
+       ▼ロゴ差し替え箇所: images/header/logo-kawasui.png
+       ============================================================ -->
+  <header class="kw-header">
+    <img src="images/header/logo-kawasui.png" alt="うなぎ屋かわすい" class="kw-header-logo">
+  </header>
+
+  <!-- ============================================================
        1. ファーストビュー
+       ▼FVメインビジュアル差し替え箇所: images/hero/hero-kanban.jpg
+       (見出しテキストは画像内に含まれています)
        ============================================================ -->
   <section class="kw-hero">
     <div class="kw-hero-content kw-inner">
-      <span class="kw-badge-anniv">楽天出店22周年記念</span>
 
-      <h1 class="kw-hero-title">
-        1日限り<span class="kw-accent">タイムスリップ。</span><br>
-        22年前、楽天に初めて<br>出店したあの日へ。
-      </h1>
-      <p class="kw-hero-sub">
-        うなぎ屋かわすい 楽天出店22周年<br>
-        7月12日限定 2,200円OFFクーポンキャンペーン
-      </p>
-
-      <!-- ▼メイン画像差し替え箇所: images/hero/hero-unagi-main.svg を実写真(jpg/png)に差し替えてください -->
       <div class="kw-hero-img-frame">
-        <img src="images/hero/hero-unagi-main.svg" alt="うなぎ屋かわすいの蒲焼うなぎ">
+        <img src="images/hero/hero-kanban.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ">
       </div>
 
       <div class="kw-hero-copy">

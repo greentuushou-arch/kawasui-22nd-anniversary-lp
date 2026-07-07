@@ -10,7 +10,8 @@
 ```
 index.html          … 特集ページ本体(HTML+CSS、CSSはpage内<style>にまとめています。JS不使用)
 images/
-  hero/              … ファーストビューのメインうなぎ画像
+  header/            … ヘッダーのロゴ画像
+  hero/              … ファーストビューのメインビジュアル(看板画像)
   history/           … 「あの日のかわすい」当時の写真4点
   products/          … 対象商品(うなぎ三種セット)カード用の商品画像
   then-now/          … 「22年前と今」比較写真(before/after)
@@ -31,7 +32,8 @@ scripts/
 
 | 画像 | 用途 | 推奨サイズ目安 |
 |---|---|---|
-| `images/hero/hero-unagi-main.svg` | ファーストビューのメインうなぎ画像 | 1200×900px以上 |
+| `images/header/logo-kawasui.png` | ヘッダーのロゴ画像(差し替え済み) | 高さ32px相当(横長・背景透過推奨) |
+| `images/hero/hero-kanban.jpg` | ファーストビューのメインビジュアル(差し替え済み、見出しテキストは画像内に含む) | 1200px幅程度 |
 | `images/history/history-shop-2004.jpg` | 出店当時の店舗ページ画像(差し替え済み) | 600×450px |
 | `images/history/history-product-2004.jpg` | 当時の商品ページ画像(差し替え済み) | 600×450px |
 | `images/history/history-work-2004.jpg` | 当時の作業風景(差し替え済み) | 600×450px |
@@ -43,6 +45,8 @@ scripts/
 | `images/coupon/coupon-visual.svg` | クーポンイメージ画像(任意) | 800×500px |
 
 対象商品を増やす場合は、`index.html` 内の `.kw-product-card` ブロックをまるごとコピーして追加してください(手順コメントあり)。
+
+※ファーストビューの見出しテキスト(「22年前、楽天に初めて出店したあの日へ。」等)は `hero-kanban.jpg` 画像内に直接描き込まれています。文言を変更する場合はHTMLではなく画像そのものを差し替えてください。
 
 ## 編集が必要な箇所(未確定情報)
 
