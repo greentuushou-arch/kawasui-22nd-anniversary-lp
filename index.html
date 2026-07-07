@@ -337,8 +337,8 @@ a.kw-cta:active{ opacity:.8; }
 }
 @keyframes kw-confetti-fall{
   0%{ transform:translate(0,0) rotate(0deg); }
-  50%{ transform:translate(var(--kw-drift,10px),55%) rotate(180deg); }
-  100%{ transform:translate(0,115%) rotate(360deg); }
+  50%{ transform:translate(var(--kw-drift,10px),calc(var(--kw-fall,600px) * 0.55)) rotate(180deg); }
+  100%{ transform:translate(0,var(--kw-fall,600px)) rotate(360deg); }
 }
 
 /* ---------- 7. 22年前と今 ---------- */
@@ -627,7 +627,9 @@ a.kw-cta:active{ opacity:.8; }
       <div class="kw-product-grid">
 
         <div class="kw-product-card">
-          <img src="images/products/product-01.jpg" alt="国産うなぎ三種セット 特製たれ付">
+          <a href="https://item.rakuten.co.jp/kawasui/10000130/">
+            <img src="images/products/product-01.jpg" alt="国産うなぎ三種セット 特製たれ付">
+          </a>
           <div class="kw-product-body">
             <p class="kw-product-name">うなぎ三種セット</p>
             <p class="kw-product-desc">職人が丁寧に焼き上げた、うなぎ蒲焼三種を食べ比べいただけるセットです。</p>
@@ -648,15 +650,15 @@ a.kw-cta:active{ opacity:.8; }
     <div class="kw-inner">
       <h2 class="kw-section-title">22年前と今</h2>
 
-      <!-- ▼比較写真差し替え箇所: images/then-now/ 配下のsvgを実写真に差し替えてください -->
+      <!-- 比較写真: images/then-now/ 配下、実写真に差し替え済み -->
       <div class="kw-compare">
         <figure>
           <figcaption>22年前のかわすい</figcaption>
-          <img src="images/then-now/then-now-before.svg" alt="22年前のかわすい">
+          <img src="images/then-now/then-now-before.jpg" alt="22年前のかわすい">
         </figure>
         <figure>
           <figcaption>今のかわすい</figcaption>
-          <img src="images/then-now/then-now-after.svg" alt="今のかわすい">
+          <img src="images/then-now/then-now-after.jpg" alt="今のかわすい">
         </figure>
       </div>
 
@@ -765,35 +767,49 @@ a.kw-cta:active{ opacity:.8; }
   var container = document.querySelector('.kw-confetti');
   if(!container){ return; }
 
-  var colors = ['#d4af37', '#f4e3a1', '#fff6d8', '#c8102e'];
-  var pieceCount = 26;
+  function spawnConfetti(){
+    // transform:translate()のY%は要素自身の高さ基準になってしまうため、
+    // 実際に必要な移動距離(px)をセクションの高さから計算してCSS変数で渡す
+    var fallDistance = container.offsetHeight + 80;
 
-  for (var i = 0; i < pieceCount; i++) {
-    var piece = document.createElement('span');
-    piece.className = 'kw-confetti-piece';
+    var colors = ['#d4af37', '#f4e3a1', '#fff6d8', '#c8102e'];
+    var pieceCount = 26;
 
-    var isRibbon = Math.random() < 0.3;
-    var color = colors[Math.floor(Math.random() * colors.length)];
-    var left = Math.random() * 100;
-    var duration = 4 + Math.random() * 4; // 4秒〜8秒で落下
-    var delay = Math.random() * -8; // マイナス遅延で開始時点から降っている状態にする
-    var drift = (Math.random() * 40 - 20); // 左右にわずかに流れるブレ幅
+    for (var i = 0; i < pieceCount; i++) {
+      var piece = document.createElement('span');
+      piece.className = 'kw-confetti-piece';
 
-    if (isRibbon) {
-      piece.classList.add('is-ribbon');
-      piece.style.width = (4 + Math.random() * 2) + 'px';
-      piece.style.height = (16 + Math.random() * 10) + 'px';
-    } else {
-      piece.style.width = piece.style.height = (6 + Math.random() * 6) + 'px';
+      var isRibbon = Math.random() < 0.3;
+      var color = colors[Math.floor(Math.random() * colors.length)];
+      var left = Math.random() * 100;
+      var duration = 4 + Math.random() * 4; // 4秒〜8秒で落下
+      var delay = Math.random() * -8; // マイナス遅延で開始時点から降っている状態にする
+      var drift = (Math.random() * 40 - 20); // 左右にわずかに流れるブレ幅
+
+      if (isRibbon) {
+        piece.classList.add('is-ribbon');
+        piece.style.width = (4 + Math.random() * 2) + 'px';
+        piece.style.height = (16 + Math.random() * 10) + 'px';
+      } else {
+        piece.style.width = piece.style.height = (6 + Math.random() * 6) + 'px';
+      }
+
+      piece.style.left = left + '%';
+      piece.style.background = color;
+      piece.style.animationDuration = duration + 's';
+      piece.style.animationDelay = delay + 's';
+      piece.style.setProperty('--kw-drift', drift + 'px');
+      piece.style.setProperty('--kw-fall', fallDistance + 'px');
+
+      container.appendChild(piece);
     }
+  }
 
-    piece.style.left = left + '%';
-    piece.style.background = color;
-    piece.style.animationDuration = duration + 's';
-    piece.style.animationDelay = delay + 's';
-    piece.style.setProperty('--kw-drift', drift + 'px');
-
-    container.appendChild(piece);
+  // 商品画像の読み込み完了後(=セクションの高さが確定した後)に生成する
+  if (document.readyState === 'complete') {
+    spawnConfetti();
+  } else {
+    window.addEventListener('load', spawnConfetti);
   }
 })();
 </script>

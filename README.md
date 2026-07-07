@@ -19,29 +19,28 @@ images/
   ceo/               … 社長のひとこと用の代表者写真
   coupon/            … クーポンビジュアル画像
 scripts/
-  make_placeholders.sh … 上記プレースホルダー画像(SVG)を生成したスクリプト(参考用、実写真差し替え後は不要)
   serve.ps1             … ローカル確認用の簡易サーバー(本番アップロードには不要)
 ```
 
 ## 画像(素材)の差し替え方法
 
-現在、すべての画像は **プレースホルダー(仮画像/SVG)** です。
-`images/` 配下の各SVGファイルを、同じファイル名で実写真(jpg/png)に差し替えるか、
-`index.html` 内の `<img src="...">` のパスを実写真のファイル名に書き換えてください。
+すべての画像は実写真/実データに差し替え済みです。今後さらに差し替える場合は、
+`images/` 配下の該当ファイルを同じファイル名で上書きするか、
+`index.html` 内の `<img src="...">` のパスを書き換えてください。
 
 差し替え箇所は `index.html` 内に `<!-- ▼〜差し替え -->` のコメントで明記しています。
 
 | 画像 | 用途 | 推奨サイズ目安 |
 |---|---|---|
-| `images/header/logo-kawasui.png` | ヘッダーのロゴ画像(差し替え済み) | 高さ32px相当(横長・背景透過推奨) |
-| `images/hero/hero-kanban-pc.jpg` | ファーストビューのメインビジュアル・PC/横長用(差し替え済み、見出し・クーポン文言は画像内に含む) | 1200px幅程度 |
-| `images/hero/hero-kanban-sp.jpg` | ファーストビューのメインビジュアル・スマホ/縦長用(差し替え済み、768px未満で表示) | 縦長(例: 500×750px程度) |
-| `images/history/history.jpg` | 「あの日のかわすい」ブロック全体の1枚画像(タイトル・本文・当時の写真を含む、差し替え済み) | 幅1000px程度 |
-| `images/products/product-01.jpg` | 対象商品(国産うなぎ三種セット)の商品画像(差し替え済み) | 600×600px |
-| `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
-| `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
-| `images/ceo/ceo-photo.jpg` | 代表者(社長)写真(差し替え済み) | 500×500px(正方形) |
-| `images/coupon/coupon.png` | 「22周年の"22"にちなんだ / 2,200円OFF / クーポンキャンペーン」クーポンビジュアル(差し替え済み) | 幅420px程度(背景透過PNG) |
+| `images/header/logo-kawasui.png` | ヘッダーのロゴ画像 | 高さ32px相当(横長・背景透過推奨) |
+| `images/hero/hero-kanban-pc.jpg` | ファーストビューのメインビジュアル・PC/横長用(見出し・クーポン文言は画像内に含む) | 1200px幅程度 |
+| `images/hero/hero-kanban-sp.jpg` | ファーストビューのメインビジュアル・スマホ/縦長用(768px未満で表示) | 縦長(例: 500×750px程度) |
+| `images/history/history.jpg` | 「あの日のかわすい」ブロック全体の1枚画像(タイトル・本文・当時の写真を含む) | 幅1000px程度 |
+| `images/products/product-01.jpg` | 対象商品(国産うなぎ三種セット)の商品画像 | 600×600px |
+| `images/then-now/then-now-before.jpg` | 22年前のかわすい | 600×800px |
+| `images/then-now/then-now-after.jpg` | 今のかわすい | 600×800px |
+| `images/ceo/ceo-photo.jpg` | 代表者(社長)写真 | 500×500px(正方形) |
+| `images/coupon/coupon.png` | 「22周年の"22"にちなんだ / 2,200円OFF / クーポンキャンペーン」クーポンビジュアル | 幅420px程度(背景透過PNG) |
 
 対象商品を増やす場合は、`index.html` 内の `.kw-product-card` ブロックをまるごとコピーして追加してください(手順コメントあり)。
 
