@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#f4ece1"/>
-  <rect x="12" y="12" width="776" height="476" fill="none" stroke="#c8102e" stroke-width="6" stroke-dasharray="18 12"/>
-  <circle cx="400" cy="180" r="46" fill="#c8102e"/>
-  <text x="50%" y="190" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#fff">画</text>
-  <text x="50%" y="260" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#8e0d1f">クーポンイメージ画像</text>
-  <text x="50%" y="296" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">2,200円OFFクーポンのイメージ画像(任意)</text>
-  <text x="50%" y="328" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">推奨サイズ目安: 800x500px</text>
-</svg>

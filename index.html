@@ -208,36 +208,11 @@ a.kw-cta:active{ opacity:.8; }
   padding:44px 20px;
   position:relative;
 }
-.kw-coupon-date{
-  display:inline-block;
-  background:#fff;
-  color:var(--red-main);
-  font-weight:bold;
-  font-size:22px;
-  padding:10px 26px;
-  border-radius:20px;
-  margin-bottom:16px;
-}
-.kw-coupon-num{
-  font-size:24px;
-  font-weight:bold;
-  margin:0 0 4px;
-  color:var(--gold-light);
-}
-.kw-coupon-price{
-  font-size:90px;
-  font-weight:900;
-  color:#fff;
-  line-height:1.1;
-  margin:0 0 4px;
-  text-shadow:0 3px 0 var(--red-deep), 0 6px 14px rgba(0,0,0,.4);
-}
-.kw-coupon-price span{ font-size:45px; }
-.kw-coupon-label{
-  font-size:26px;
-  font-weight:bold;
-  color:var(--gold-light);
-  margin-bottom:24px;
+.kw-coupon-image{
+  max-width:420px;
+  width:100%;
+  height:auto;
+  margin:0 auto 24px;
 }
 .kw-coupon-block .kw-body-text{ color:#fff; text-align:left; }
 .kw-coupon-block .kw-body-text p{ font-size:14px; }
@@ -491,9 +466,6 @@ a.kw-cta:active{ opacity:.8; }
 
   .kw-coupon-block .kw-body-text{ text-align:center; }
 
-  .kw-coupon-price{ font-size:115px; }
-  .kw-coupon-price span{ font-size:58px; }
-
   .kw-final-btns{ flex-direction:row; justify-content:center; }
   .kw-final-btns a{ min-width:260px; }
 
@@ -576,11 +548,8 @@ a.kw-cta:active{ opacity:.8; }
        ============================================================ -->
   <section class="kw-coupon-block">
     <div class="kw-inner">
-      <span class="kw-coupon-date">7月12日限定</span>
-
-      <p class="kw-coupon-num">22周年の"22"にちなんだ</p>
-      <p class="kw-coupon-price">2,200<span>円OFF</span></p>
-      <p class="kw-coupon-label">クーポンキャンペーン</p>
+      <!-- ▼差し替え箇所: images/coupon/coupon.png -->
+      <img src="images/coupon/coupon.png" alt="22周年の22にちなんだ 2,200円OFFクーポンキャンペーン" class="kw-coupon-image">
 
       <div class="kw-body-text">
         <p>当時の価格をそのまま再現することはできない。<br>でも、22年間の感謝の気持ちを、少しでも形にしたい。</p>

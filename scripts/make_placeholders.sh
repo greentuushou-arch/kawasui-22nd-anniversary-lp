@@ -32,6 +32,5 @@ SVG
 make_svg "$BASE/images/products/product-01.svg" 600 600 "うなぎ三種セット 画像" "商品名・パッケージが分かる写真" "600x600px"
 make_svg "$BASE/images/then-now/then-now-before.svg" 600 800 "22年前の写真" "2004年頃の店舗・商品・スタッフ等" "600x800px"
 make_svg "$BASE/images/then-now/then-now-after.svg" 600 800 "現在の写真" "現在の店舗・商品・スタッフ等" "600x800px"
-make_svg "$BASE/images/coupon/coupon-visual.svg" 800 500 "クーポンイメージ画像" "2,200円OFFクーポンのイメージ画像(任意)" "800x500px"
 
 echo "全プレースホルダー画像を生成しました。"

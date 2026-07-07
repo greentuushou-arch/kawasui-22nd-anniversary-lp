@@ -16,7 +16,7 @@ images/
   products/          … 対象商品(うなぎ三種セット)カード用の商品画像
   then-now/          … 「22年前と今」比較写真(before/after)
   ceo/               … 社長のひとこと用の代表者写真
-  coupon/            … クーポンイメージ画像(任意・未使用時は削除可)
+  coupon/            … クーポンビジュアル画像
 scripts/
   make_placeholders.sh … 上記プレースホルダー画像(SVG)を生成したスクリプト(参考用、実写真差し替え後は不要)
   serve.ps1             … ローカル確認用の簡易サーバー(本番アップロードには不要)
@@ -40,7 +40,7 @@ scripts/
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
 | `images/ceo/ceo-photo.jpg` | 代表者(社長)写真(差し替え済み) | 500×500px(正方形) |
-| `images/coupon/coupon-visual.svg` | クーポンイメージ画像(任意) | 800×500px |
+| `images/coupon/coupon.png` | 「22周年の"22"にちなんだ / 2,200円OFF / クーポンキャンペーン」クーポンビジュアル(差し替え済み) | 幅420px程度(背景透過PNG) |
 
 対象商品を増やす場合は、`index.html` 内の `.kw-product-card` ブロックをまるごとコピーして追加してください(手順コメントあり)。
 
