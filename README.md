@@ -37,7 +37,7 @@ scripts/
 | `images/hero/hero-kanban-pc.jpg` | ファーストビューのメインビジュアル・PC/横長用(差し替え済み、見出し・クーポン文言は画像内に含む) | 1200px幅程度 |
 | `images/hero/hero-kanban-sp.jpg` | ファーストビューのメインビジュアル・スマホ/縦長用(差し替え済み、768px未満で表示) | 縦長(例: 500×750px程度) |
 | `images/history/history.jpg` | 「あの日のかわすい」ブロック全体の1枚画像(タイトル・本文・当時の写真を含む、差し替え済み) | 幅1000px程度 |
-| `images/products/product-01.svg` | 対象商品(うなぎ三種セット)の商品画像 | 600×600px |
+| `images/products/product-01.jpg` | 対象商品(国産うなぎ三種セット)の商品画像(差し替え済み) | 600×600px |
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
 | `images/ceo/ceo-photo.jpg` | 代表者(社長)写真(差し替え済み) | 500×500px(正方形) |
