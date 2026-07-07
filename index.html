@@ -104,12 +104,32 @@ a.kw-cta:active{ opacity:.8; }
 .kw-hero-img-frame{
   margin:0 0 20px;
   position:relative;
+  overflow:hidden;
 }
 .kw-hero-img-frame img{
   width:100%;
   height:auto;
 }
 .kw-hero-img-frame .kw-hero-img-pc{ display:none; }
+
+/* タイムスリップ感を出すキラーンとしたシャインエフェクト(CSSのみ、JS不使用) */
+.kw-hero-img-frame::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-60%;
+  width:35%;
+  height:100%;
+  background:linear-gradient(75deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%);
+  transform:skewX(-20deg);
+  animation:kw-hero-shine 4.5s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes kw-hero-shine{
+  0%{ left:-60%; }
+  35%{ left:130%; }
+  100%{ left:130%; }
+}
 
 .kw-hero-copy{
   /* スマホ用画像(hero-kanban-sp.jpg)に同内容が含まれるため、スマホでは非表示。PC用画像には含まれないためPCでは表示 */
