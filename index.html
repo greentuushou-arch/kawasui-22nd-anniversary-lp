@@ -131,8 +131,13 @@ a.kw-cta:active{ opacity:.8; }
   padding:16px;
   margin-bottom:20px;
 }
-.kw-hero-copy p{ margin:0; font-size:14px; font-weight:bold; }
-.kw-hero-copy p + p{ margin-top:4px; }
+.kw-hero-copy p{ margin:0; font-size:20px; font-weight:bold; line-height:1.5; }
+.kw-hero-copy p + p{ margin-top:8px; }
+
+/* 狭い画面(iPhone SE等)では文字サイズを少し抑えてバランス調整 */
+@media screen and (max-width:359px){
+  .kw-hero-copy p{ font-size:17px; }
+}
 
 .kw-cta-primary{
   background:linear-gradient(180deg,#ffe27a,var(--gold));
@@ -482,6 +487,9 @@ a.kw-cta:active{ opacity:.8; }
   .kw-header-logo{ height:44px; }
   .kw-hero-img-frame{ margin-left:0; margin-right:0; border-radius:8px; overflow:hidden; }
   .kw-hero-img-frame img{ border-radius:8px; }
+  .kw-hero-copy p{ font-size:23px; }
+
+  .kw-coupon-block .kw-body-text{ text-align:center; }
 
   .kw-history-grid{ grid-template-columns:repeat(4,1fr); }
 
@@ -519,8 +527,8 @@ a.kw-cta:active{ opacity:.8; }
       </div>
 
       <div class="kw-hero-copy">
-        <p>うなぎ屋かわすい 楽天出店22周年記念</p>
-        <p>7月12日限定 感謝の2,200円OFFクーポン</p>
+        <p>うなぎ屋かわすい<br>楽天出店22周年記念</p>
+        <p>7月12日限定<br>感謝の2,200円OFFクーポン</p>
       </div>
 
       <!-- ▼CTAリンク先: # を実際のクーポン取得ページ/対象商品ページのURLに差し替えてください -->
@@ -729,7 +737,7 @@ a.kw-cta:active{ opacity:.8; }
           <p>これからも、変わらぬ美味しさと真心をお届けできるよう努めてまいります。今後とも、うなぎ屋かわすいをよろしくお願いいたします。</p>
           <p class="kw-ceo-sign">
             うなぎ屋かわすい<br>
-            代表取締役　<span><!-- ▼代表者名を入力 -->〇〇〇〇</span>
+            代表取締役　<span>川口 泰史</span>
           </p>
         </div>
       </div>
