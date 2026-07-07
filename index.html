@@ -183,22 +183,10 @@ a.kw-cta:active{ opacity:.8; }
 }
 .kw-body-text p{ margin:0 0 1em; }
 
-.kw-history-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:24px 0 8px;
-}
-.kw-history-grid figure{ margin:0; }
-.kw-history-grid img{
-  border:3px solid var(--gold);
-  border-radius:4px;
-}
-.kw-history-grid figcaption{
-  font-size:11px;
-  color:#888;
-  text-align:center;
-  margin-top:6px;
+.kw-history-image{
+  width:100%;
+  height:auto;
+  border-radius:8px;
 }
 
 /* ---------- 3. 本当は22年前の価格で... ---------- */
@@ -503,8 +491,6 @@ a.kw-cta:active{ opacity:.8; }
 
   .kw-coupon-block .kw-body-text{ text-align:center; }
 
-  .kw-history-grid{ grid-template-columns:repeat(4,1fr); }
-
   .kw-coupon-price{ font-size:115px; }
   .kw-coupon-price span{ font-size:58px; }
 
@@ -558,38 +544,12 @@ a.kw-cta:active{ opacity:.8; }
   </section>
 
   <!-- ============================================================
-       2. 2004年7月12日、あの日から始まりました
+       2. あの日のかわすい(1枚画像)
+       ▼差し替え箇所: images/history/history.jpg
        ============================================================ -->
   <section class="kw-section kw-section-cream">
     <div class="kw-inner">
-      <h2 class="kw-section-title">あの日のかわすい<small>2004年7月12日、あの日から始まりました</small></h2>
-
-      <div class="kw-body-text">
-        <p>2004年7月12日。<br>うなぎ屋かわすいが楽天市場に初めて出店した日。</p>
-        <p>注文が入るたびに喜び、<br>お客様からいただくレビューに励まされ、<br>気が付けば22年。</p>
-        <p>たくさんのお客様に支えていただき、<br>今年、楽天出店22周年を迎えることができました。</p>
-        <p>本当にありがとうございます。</p>
-      </div>
-
-      <!-- 当時の写真4点: images/history/ 配下、実写真に差し替え済み -->
-      <div class="kw-history-grid">
-        <figure>
-          <img src="images/history/history-shop-2004.jpg" alt="出店当時の店舗ページ画像">
-          <figcaption>出店当時の店舗ページ</figcaption>
-        </figure>
-        <figure>
-          <img src="images/history/history-product-2004.jpg" alt="当時の商品ページ画像">
-          <figcaption>当時の商品ページ</figcaption>
-        </figure>
-        <figure>
-          <img src="images/history/history-work-2004.jpg" alt="当時の作業風景">
-          <figcaption>当時の作業風景</figcaption>
-        </figure>
-        <figure>
-          <img src="images/history/history-staff-2004.jpg" alt="当時のスタッフ写真">
-          <figcaption>当時のスタッフ</figcaption>
-        </figure>
-      </div>
+      <img src="images/history/history.jpg" alt="あの日のかわすい 2004年7月12日、あの日から始まりました" class="kw-history-image">
     </div>
   </section>
 

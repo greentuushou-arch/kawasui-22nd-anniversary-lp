@@ -12,7 +12,7 @@ index.html          … 特集ページ本体(HTML+CSS、CSSはpage内<style>に
 images/
   header/            … ヘッダーのロゴ画像
   hero/              … ファーストビューのメインビジュアル(看板画像)
-  history/           … 「あの日のかわすい」当時の写真4点
+  history/           … 「あの日のかわすい」ブロックの1枚画像
   products/          … 対象商品(うなぎ三種セット)カード用の商品画像
   then-now/          … 「22年前と今」比較写真(before/after)
   ceo/               … 社長のひとこと用の代表者写真
@@ -35,10 +35,7 @@ scripts/
 | `images/header/logo-kawasui.png` | ヘッダーのロゴ画像(差し替え済み) | 高さ32px相当(横長・背景透過推奨) |
 | `images/hero/hero-kanban.jpg` | ファーストビューのメインビジュアル・PC/横長用(差し替え済み、見出しテキストは画像内に含む) | 1200px幅程度 |
 | `images/hero/hero-kanban-sp.jpg` | ファーストビューのメインビジュアル・スマホ/縦長用(差し替え済み、768px未満で表示) | 縦長(例: 500×750px程度) |
-| `images/history/history-shop-2004.jpg` | 出店当時の店舗ページ画像(差し替え済み) | 600×450px |
-| `images/history/history-product-2004.jpg` | 当時の商品ページ画像(差し替え済み) | 600×450px |
-| `images/history/history-work-2004.jpg` | 当時の作業風景(差し替え済み) | 600×450px |
-| `images/history/history-staff-2004.jpg` | 当時のスタッフ写真(差し替え済み) | 600×450px |
+| `images/history/history.jpg` | 「あの日のかわすい」ブロック全体の1枚画像(タイトル・本文・当時の写真を含む、差し替え済み) | 幅1000px程度 |
 | `images/products/product-01.svg` | 対象商品(うなぎ三種セット)の商品画像 | 600×600px |
 | `images/then-now/then-now-before.svg` | 22年前のかわすい | 600×800px |
 | `images/then-now/then-now-after.svg` | 今のかわすい | 600×800px |
