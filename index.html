@@ -133,23 +133,6 @@ a.kw-cta:active{ opacity:.8; }
   100%{ left:130%; }
 }
 
-.kw-hero-copy{
-  /* スマホ用画像(hero-kanban-sp.jpg)に同内容が含まれるため、スマホでは非表示。PC用画像には含まれないためPCでは表示 */
-  display:none;
-  background:rgba(0,0,0,.22);
-  border:1px solid rgba(255,255,255,.4);
-  border-radius:10px;
-  padding:16px;
-  margin-bottom:20px;
-}
-.kw-hero-copy p{ margin:0; font-size:20px; font-weight:bold; line-height:1.5; }
-.kw-hero-copy p + p{ margin-top:8px; }
-
-/* 狭い画面(iPhone SE等)では文字サイズを少し抑えてバランス調整 */
-@media screen and (max-width:359px){
-  .kw-hero-copy p{ font-size:17px; }
-}
-
 .kw-cta-primary{
   background:linear-gradient(180deg,#ffe27a,var(--gold));
   color:var(--red-deep);
@@ -461,8 +444,6 @@ a.kw-cta:active{ opacity:.8; }
   .kw-header-logo{ height:44px; }
   .kw-hero-img-frame .kw-hero-img-sp{ display:none; }
   .kw-hero-img-frame .kw-hero-img-pc{ display:block; }
-  .kw-hero-copy{ display:block; }
-  .kw-hero-copy p{ font-size:23px; }
 
   .kw-coupon-block .kw-body-text{ text-align:center; }
 
@@ -486,25 +467,20 @@ a.kw-cta:active{ opacity:.8; }
 
   <!-- ============================================================
        1. ファーストビュー
-       ▼FVメインビジュアル差し替え箇所: images/hero/hero-kanban.jpg
-       (見出しテキストは画像内に含まれています)
+       ▼FVメインビジュアル差し替え箇所: images/hero/hero-kanban-pc.jpg
+       (見出しテキスト・クーポン文言は画像内に含まれています)
        ============================================================ -->
   <section class="kw-hero">
-    <!-- スマホ幅(767px以下)では縦長のhero-kanban-sp.jpgを表示、768px以上では横長のhero-kanban.jpgを表示 -->
+    <!-- スマホ幅(767px以下)では縦長のhero-kanban-sp.jpgを表示、768px以上では横長のhero-kanban-pc.jpgを表示 -->
     <div class="kw-hero-img-frame">
       <img src="images/hero/hero-kanban-sp.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-sp">
-      <img src="images/hero/hero-kanban.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-pc">
+      <img src="images/hero/hero-kanban-pc.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ 感謝の2,200円OFFクーポン" class="kw-hero-img-pc">
     </div>
 
     <div class="kw-hero-content kw-inner">
 
-      <div class="kw-hero-copy">
-        <p>うなぎ屋かわすい<br>楽天出店22周年記念</p>
-        <p>7月12日限定<br>感謝の2,200円OFFクーポン</p>
-      </div>
-
-      <!-- ▼CTAリンク先: # を実際のクーポン取得ページ/対象商品ページのURLに差し替えてください -->
-      <a href="#" class="kw-cta kw-cta-primary">
+      <!-- クーポン取得ページへのリンク設定済み -->
+      <a href="https://coupon.rakuten.co.jp/getCoupon?getkey=T0NEMC1EWjRDLUFITkQtSlFEMg--&rt=" class="kw-cta kw-cta-primary">
         今すぐクーポンを獲得する
         <span class="kw-cta-sub">※クーポンは7月12日限定・数量には限りがあります</span>
       </a>
@@ -557,8 +533,8 @@ a.kw-cta:active{ opacity:.8; }
         <p>22年間、本当にありがとうございます。<br>感謝を込めた、7月12日だけの特別企画です。</p>
       </div>
 
-      <!-- ▼CTAリンク先: # を実際のクーポン取得ページのURLに差し替えてください -->
-      <a href="#" class="kw-cta kw-cta-gold">2,200円OFFクーポンを獲得する</a>
+      <!-- クーポン取得ページへのリンク設定済み -->
+      <a href="https://coupon.rakuten.co.jp/getCoupon?getkey=T0NEMC1EWjRDLUFITkQtSlFEMg--&rt=" class="kw-cta kw-cta-gold">2,200円OFFクーポンを獲得する</a>
     </div>
   </section>
 
@@ -698,8 +674,8 @@ a.kw-cta:active{ opacity:.8; }
         1日限りの特別企画。
       </p>
       <div class="kw-final-btns">
-        <!-- ▼CTAリンク先: # を実際のURLに差し替えてください -->
-        <a href="#" class="kw-cta kw-cta-gold">クーポンを獲得する</a>
+        <!-- クーポン取得ページへのリンク設定済み -->
+        <a href="https://coupon.rakuten.co.jp/getCoupon?getkey=T0NEMC1EWjRDLUFITkQtSlFEMg--&rt=" class="kw-cta kw-cta-gold">クーポンを獲得する</a>
         <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-cta-outline">対象商品を見る</a>
       </div>
     </div>
@@ -719,7 +695,7 @@ a.kw-cta:active{ opacity:.8; }
 
   <!-- スマホ追従CTA(JS不使用/position:stickyのみ、PCでは非表示) -->
   <div class="kw-sticky-cta">
-    <a href="#" class="kw-cta kw-sticky-primary">クーポンを獲得する</a>
+    <a href="https://coupon.rakuten.co.jp/getCoupon?getkey=T0NEMC1EWjRDLUFITkQtSlFEMg--&rt=" class="kw-cta kw-sticky-primary">クーポンを獲得する</a>
     <a href="https://item.rakuten.co.jp/kawasui/10000130/" class="kw-cta kw-sticky-secondary">対象商品を見る</a>
   </div>
 
