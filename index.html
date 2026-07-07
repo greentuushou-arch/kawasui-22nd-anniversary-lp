@@ -109,6 +109,7 @@ a.kw-cta:active{ opacity:.8; }
   width:100%;
   height:auto;
 }
+.kw-hero-img-frame .kw-hero-img-pc{ display:none; }
 
 .kw-hero-copy{
   background:rgba(0,0,0,.22);
@@ -471,6 +472,8 @@ a.kw-cta:active{ opacity:.8; }
    ========================================================================== */
 @media screen and (min-width:768px){
   .kw-header-logo{ height:44px; }
+  .kw-hero-img-frame .kw-hero-img-sp{ display:none; }
+  .kw-hero-img-frame .kw-hero-img-pc{ display:block; }
   .kw-hero-copy p{ font-size:23px; }
 
   .kw-coupon-block .kw-body-text{ text-align:center; }
@@ -506,8 +509,10 @@ a.kw-cta:active{ opacity:.8; }
   <section class="kw-hero">
     <div class="kw-hero-content kw-inner">
 
+      <!-- スマホ幅(767px以下)では縦長のhero-kanban-sp.jpgを表示、768px以上では横長のhero-kanban.jpgを表示 -->
       <div class="kw-hero-img-frame">
-        <img src="images/hero/hero-kanban.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ">
+        <img src="images/hero/hero-kanban-sp.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-sp">
+        <img src="images/hero/hero-kanban.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-pc">
       </div>
 
       <div class="kw-hero-copy">

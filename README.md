@@ -33,7 +33,8 @@ scripts/
 | 画像 | 用途 | 推奨サイズ目安 |
 |---|---|---|
 | `images/header/logo-kawasui.png` | ヘッダーのロゴ画像(差し替え済み) | 高さ32px相当(横長・背景透過推奨) |
-| `images/hero/hero-kanban.jpg` | ファーストビューのメインビジュアル(差し替え済み、見出しテキストは画像内に含む) | 1200px幅程度 |
+| `images/hero/hero-kanban.jpg` | ファーストビューのメインビジュアル・PC/横長用(差し替え済み、見出しテキストは画像内に含む) | 1200px幅程度 |
+| `images/hero/hero-kanban-sp.jpg` | ファーストビューのメインビジュアル・スマホ/縦長用(差し替え済み、768px未満で表示) | 縦長(例: 500×750px程度) |
 | `images/history/history-shop-2004.jpg` | 出店当時の店舗ページ画像(差し替え済み) | 600×450px |
 | `images/history/history-product-2004.jpg` | 当時の商品ページ画像(差し替え済み) | 600×450px |
 | `images/history/history-work-2004.jpg` | 当時の作業風景(差し替え済み) | 600×450px |
