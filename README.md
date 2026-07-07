@@ -8,7 +8,7 @@
 ## ファイル構成
 
 ```
-index.html          … 特集ページ本体(HTML+CSS、CSSはpage内<style>にまとめています。JS不使用)
+index.html          … 特集ページ本体(HTML+CSS、CSSはpage内<style>にまとめています。FVのシャインエフェクトのみ、body末尾の<script>でJSを使用)
 images/
   header/            … ヘッダーのロゴ画像
   hero/              … ファーストビューのメインビジュアル(看板画像)
@@ -60,7 +60,7 @@ scripts/
 
 ## 実装方針
 
-- JavaScriptは使用していません(楽天GOLD/商品ページでの利用を想定し、HTML/CSSのみで構成)
+- 基本はJavaScript不使用(楽天GOLD/商品ページでの利用を想定し、HTML/CSSのみで構成)。ただしFV看板画像のシャインエフェクトのみ、ランダムな間隔で自然に光らせるためbody末尾の<script>でJSを使用しています。JSが実行できない環境でもシャインが出ないだけでレイアウトは崩れません
 - CSSは `index.html` の `<style>` 内にまとめています
 - スマホ表示を基準に作成し、768px以上でPC向けレイアウトに切り替わります(メディアクエリ)
 - スマホ追従CTAバーは `position: sticky` のみで実装(JS不使用)

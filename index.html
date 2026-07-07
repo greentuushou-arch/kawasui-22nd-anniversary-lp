@@ -112,7 +112,8 @@ a.kw-cta:active{ opacity:.8; }
 }
 .kw-hero-img-frame .kw-hero-img-pc{ display:none; }
 
-/* タイムスリップ感を出すキラーンとしたシャインエフェクト(CSSのみ、JS不使用) */
+/* タイムスリップ感を出すキラーンとしたシャインエフェクト
+   JSでランダムな間隔ごとに .kw-shine-play を付け外しして再生する(下部のscript参照) */
 .kw-hero-img-frame::after{
   content:"";
   position:absolute;
@@ -122,12 +123,13 @@ a.kw-cta:active{ opacity:.8; }
   height:100%;
   background:linear-gradient(75deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%);
   transform:skewX(-20deg);
-  animation:kw-hero-shine 3.2s ease-out infinite;
   pointer-events:none;
+}
+.kw-hero-img-frame.kw-shine-play::after{
+  animation:kw-hero-shine .7s cubic-bezier(.19,1,.22,1);
 }
 @keyframes kw-hero-shine{
   0%{ left:-60%; }
-  15%{ left:130%; }
   100%{ left:130%; }
 }
 
@@ -793,5 +795,32 @@ a.kw-cta:active{ opacity:.8; }
   </div>
 
 </div>
+
+<!-- FV看板画像のシャインエフェクトをランダムな間隔で再生する(ユーザー了承のうえJS使用) -->
+<script>
+(function(){
+  var frame = document.querySelector('.kw-hero-img-frame');
+  if(!frame){ return; }
+
+  function playShine(){
+    frame.classList.remove('kw-shine-play');
+    void frame.offsetWidth; // reflow させてアニメーションを再始動できるようにする
+    frame.classList.add('kw-shine-play');
+  }
+
+  function scheduleNext(){
+    var delay = 2800 + Math.random() * 3400; // 2.8秒〜6.2秒でランダムに次の発光を予約
+    setTimeout(function(){
+      playShine();
+      scheduleNext();
+    }, delay);
+  }
+
+  setTimeout(function(){
+    playShine();
+    scheduleNext();
+  }, 700 + Math.random() * 600);
+})();
+</script>
 </body>
 </html>
