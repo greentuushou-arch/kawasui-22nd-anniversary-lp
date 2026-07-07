@@ -112,25 +112,34 @@ a.kw-cta:active{ opacity:.8; }
 }
 .kw-hero-img-frame .kw-hero-img-pc{ display:none; }
 
-/* タイムスリップ感を出すキラーンとしたシャインエフェクト
-   JSでランダムな間隔ごとに .kw-shine-play を付け外しして再生する(下部のscript参照) */
-.kw-hero-img-frame::after{
-  content:"";
+/* タイムスリップ感を出す「キラリーん」としたスパークル(星の瞬き)エフェクト
+   JSでスパークルごとにランダムな間隔で .kw-sparkle-play を付け外しして再生する(下部のscript参照) */
+.kw-sparkle{
   position:absolute;
-  top:0;
-  left:-60%;
-  width:35%;
-  height:100%;
-  background:linear-gradient(75deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%);
-  transform:skewX(-20deg);
+  width:22px;
+  height:22px;
+  background:#fff;
+  clip-path:polygon(50% 0%, 61% 35%, 100% 50%, 61% 65%, 50% 100%, 39% 65%, 0% 50%, 39% 35%);
+  opacity:0;
+  transform:scale(0) rotate(0deg);
   pointer-events:none;
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.95));
 }
-.kw-hero-img-frame.kw-shine-play::after{
-  animation:kw-hero-shine .7s cubic-bezier(.19,1,.22,1);
+.kw-sparkle-1{ top:6%; left:7%; }
+.kw-sparkle-2{ top:7%; right:8%; }
+.kw-sparkle-3{ top:16%; left:46%; width:16px; height:16px; }
+.kw-sparkle.kw-sparkle-play{
+  animation:kw-sparkle-twinkle 1s ease-in-out;
 }
-@keyframes kw-hero-shine{
-  0%{ left:-60%; }
-  100%{ left:130%; }
+@keyframes kw-sparkle-twinkle{
+  0%{ opacity:0; transform:scale(0) rotate(0deg); }
+  40%{ opacity:1; transform:scale(1) rotate(18deg); }
+  70%{ opacity:1; transform:scale(.8) rotate(18deg); }
+  100%{ opacity:0; transform:scale(0) rotate(36deg); }
+}
+@media screen and (min-width:768px){
+  .kw-sparkle{ width:30px; height:30px; }
+  .kw-sparkle-3{ width:20px; height:20px; }
 }
 
 .kw-hero-copy{
@@ -536,6 +545,9 @@ a.kw-cta:active{ opacity:.8; }
     <div class="kw-hero-img-frame">
       <img src="images/hero/hero-kanban-sp.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-sp">
       <img src="images/hero/hero-kanban.jpg" alt="うなぎ屋かわすい 楽天出店22周年 7月12日の1日限りタイムスリップ" class="kw-hero-img-pc">
+      <span class="kw-sparkle kw-sparkle-1"></span>
+      <span class="kw-sparkle kw-sparkle-2"></span>
+      <span class="kw-sparkle kw-sparkle-3"></span>
     </div>
 
     <div class="kw-hero-content kw-inner">
@@ -796,30 +808,32 @@ a.kw-cta:active{ opacity:.8; }
 
 </div>
 
-<!-- FV看板画像のシャインエフェクトをランダムな間隔で再生する(ユーザー了承のうえJS使用) -->
+<!-- FV看板画像のスパークル(星の瞬き)をスパークルごとにランダムな間隔で再生する(ユーザー了承のうえJS使用) -->
 <script>
 (function(){
-  var frame = document.querySelector('.kw-hero-img-frame');
-  if(!frame){ return; }
+  var sparkles = document.querySelectorAll('.kw-sparkle');
+  if(!sparkles.length){ return; }
 
-  function playShine(){
-    frame.classList.remove('kw-shine-play');
-    void frame.offsetWidth; // reflow させてアニメーションを再始動できるようにする
-    frame.classList.add('kw-shine-play');
+  function playSparkle(el){
+    el.classList.remove('kw-sparkle-play');
+    void el.offsetWidth; // reflow させてアニメーションを再始動できるようにする
+    el.classList.add('kw-sparkle-play');
   }
 
-  function scheduleNext(){
-    var delay = 2800 + Math.random() * 3400; // 2.8秒〜6.2秒でランダムに次の発光を予約
+  function loop(el){
+    var delay = 2200 + Math.random() * 4000; // 2.2秒〜6.2秒でランダムに次の瞬きを予約(星ごとに独立)
     setTimeout(function(){
-      playShine();
-      scheduleNext();
+      playSparkle(el);
+      loop(el);
     }, delay);
   }
 
-  setTimeout(function(){
-    playShine();
-    scheduleNext();
-  }, 700 + Math.random() * 600);
+  sparkles.forEach(function(el, i){
+    setTimeout(function(){
+      playSparkle(el);
+      loop(el);
+    }, 500 + i * 350 + Math.random() * 600);
+  });
 })();
 </script>
 </body>
